@@ -1,43 +1,39 @@
 package com.vkt.prote
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.webkit.SafeBrowsingResponseCompat
 
 class MainActivity : AppCompatActivity() {
+    // Declaração da variável WebView para uso posterior
+    private lateinit var webview: WebView
+
+    // Método chamado quando a atividade é criada
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) // Define o layout da atividade
 
-        //CRIANDO VARIÁVEL WEBVIEW
-        val webview = findViewById<WebView>(R.id.webview)
-
-        //Carregar URL
-        webview.loadUrl("https://os.protechmak.com")
-
-        //Cliente Chrome
+        // Inicializa a WebView buscando pelo ID definido no layout
+        webview = findViewById(R.id.webview)
+        // Define um WebViewClient para a WebView, que permite o carregamento de URLs dentro da WebView
         webview.webViewClient = WebViewClient()
-
-        //Suporte a JavaScript
+        // Habilita o suporte a JavaScript na WebView
         webview.settings.javaScriptEnabled = true
 
-
-        //Suporte a Zoom
-        webview.settings.setSupportZoom(true)
-
+        // Verifica se há um estado salvo; se não houver, carrega a URL inicial
+        if (savedInstanceState == null) {
+            webview.loadUrl("https://os.protechmak.com")
+        } else {
+            // Se houver um estado salvo, restaura o estado da WebView
+            webview.restoreState(savedInstanceState)
+        }
     }
 
+    // Método chamado para salvar o estado da atividade antes de ser destruída
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Salva o estado atual da WebView no Bundle passado
+        webview.saveState(outState)
+    }
 }
-
-
-
-
-

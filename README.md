@@ -18,12 +18,10 @@ O **Protech WebView App** é um aplicativo Android que utiliza uma `WebView` par
 - **Android SDK**: Para desenvolvimento de aplicativos Android
 - **WebView**: Para renderizar o conteúdo da web
 
-## Instalação
+## Uso
 
-1. Clone este repositório:
+1. Clone este repositório, mas não se esqueça de adpatar ao seu código, pois cada um possui seu próprio nome de pacote e isto deve ser levado em consideração.
 
-   ```bash
-   git clone https://github.com/seuusuario/protech-webview-app.git
 
 https://www.youtube.com/@vkt-2
 VKT Studio Web

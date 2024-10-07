@@ -1,8 +1,29 @@
-# webview-kotlin-android
-Webview Simples - Kotlin - Android Studio 2024
+# Protech WebView App
 
-Aplicativo WebView Kotlin para Android
-Ideal para transformar websites responsivos em aplicativos android
-Comece usando o android studio.
+## Descrição
+
+O **Protech WebView App** é um aplicativo Android que utiliza uma `WebView` para exibir o site da Protech, especializado em manutenção e automação industrial, com foco em lavanderias industriais. O aplicativo oferece uma navegação fluida, permitindo que a equipe acesse facilmente o sistema interno de ordens de serviço.
+
+## Funcionalidades
+
+- Carregamento de páginas da web diretamente no aplicativo
+- Suporte a JavaScript para melhor funcionalidade do site
+- Navegação entre páginas sem recarregar o conteúdo
+- Capacidade de assistir a vídeos em tela cheia
+- Armazenamento da URL atual para preservar a navegação durante mudanças de configuração
+
+## Tecnologias Utilizadas
+
+- **Kotlin**: Linguagem de programação principal
+- **Android SDK**: Para desenvolvimento de aplicativos Android
+- **WebView**: Para renderizar o conteúdo da web
+
+## Instalação
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/seuusuario/protech-webview-app.git
+
 https://www.youtube.com/@vkt-2
 VKT Studio Web

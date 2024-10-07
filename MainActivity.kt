@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         // Verifica se há um estado salvo; se não houver, carrega a URL inicial
         if (savedInstanceState == null) {
-            webview.loadUrl("https://google.com/")
+            webview.loadUrl("https://os.protechmak.com")
         } else {
             // Se houver um estado salvo, restaura o estado da WebView
             webview.restoreState(savedInstanceState)
